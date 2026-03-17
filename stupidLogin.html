@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stupid Login</title>
+    <script>
+        function login() {
+            // Get the input values
+            const email = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            // I don't want to make it fully stupid and vulnerable
+            // so at least fix the access control a bit
+            // by input validation
+            if (email === "" && password === "") {
+                alert("ERROR: Empty field. Try again.");
+                return false;
+            }
+            //verify that it has "@"
+            if(!email.includes("@")) {
+                alert("ERROR: Invalid email format. Try again.");
+                return false;
+            }
+            //practice secure password requirements...at least
+            if (password.length < 8) {
+                alert("ERROR: Password is weak. Try again.");
+                return false;
+            } 
+            //valid?
+            alert("Login successful! Welcome, " + email + "!");
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Stupid Login</h1>
+    <form onsubmit="return login()">
+        <label>Email:</label><br>
+        <input type="text" id="email" name="email"><br><br>
+        <label>Password:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+        <button type="submit">Access</button>
+    </form>
+</body>
+</html>
