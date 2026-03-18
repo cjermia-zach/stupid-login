@@ -1,7 +1,7 @@
 # CSCE 477 Homework 3: A Stupid Login Page
 This is a simple HTML &amp; JavaScript document to demonstrate vulnerability in a simple login form. This is part of Texas A&amp;M's CSCE 477 course and shall not be used for malicious purposes.
 
-In this example, instead of creating the JavaScript file separately, the HTML and JavaScript codes are combined. The body of the HTML itself is relatively simple, with a username field, a password field, and an access button, as seen in this snippet:
+In this example, instead of creating the JavaScript file separately, the HTML and JavaScript codes are combined. The body of the HTML itself is relatively simple, with a username field, a password field, and an access button, as seen in this snippet that is used to build the main display:
 
 ```
 <body>
@@ -16,7 +16,7 @@ In this example, instead of creating the JavaScript file separately, the HTML an
 </body>
 ```
 
-The JavaScript portion is on the following lines of code:
+The JavaScript portion is on the following lines of code, which are used for validation:
 
 ```
 
